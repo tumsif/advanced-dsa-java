@@ -1,3 +1,5 @@
+package com.dsa;
+
 import java.util.Stack;
 
 public class StackDemo {

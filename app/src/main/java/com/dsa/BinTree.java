@@ -1,3 +1,5 @@
+package com.dsa;
+
 public class BinTree {
     /**
      * A tree is a data structure that consists of elements called nodes, joined together using edges

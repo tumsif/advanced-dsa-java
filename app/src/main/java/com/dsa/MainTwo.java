@@ -1,4 +1,6 @@
-public class Main {
+package com.dsa;
+
+class MainTwo {
     public static void main(String[] args){
 
         BinTree root = new BinTree(7);
@@ -78,19 +80,19 @@ public class Main {
         BinTree.inOrderTraversal(newTree);
 
         System.out.println();
-        System.out.println(Main.fact(5));
+        System.out.println(MainTwo.fact(5));
 
         System.out.println("Converting a number to another base");
         System.out.print("102 to base 2 ");
-        Main.convertToBase(102, 2);
+        MainTwo.convertToBase(102, 2);
         System.out.println();
 
         System.out.print("102 to base 9 ");
-        Main.convertToBase(102, 9);
+        MainTwo.convertToBase(102, 9);
         System.out.println();
 
         System.out.print("678 to base 9 ");
-        Main.convertToBase(678, 9);
+        MainTwo.convertToBase(678, 9);
         System.out.println();
     }
 

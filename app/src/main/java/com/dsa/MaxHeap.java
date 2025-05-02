@@ -1,3 +1,5 @@
+package com.dsa;
+
 class MaxHeap {
     int size;
     Comparable[] items;
