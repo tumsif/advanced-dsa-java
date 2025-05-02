@@ -12,3 +12,4 @@ plugins {
 
 rootProject.name = "advanced-dsa-java"
 include("app")
+project(":app").name = "advanced-dsa-java"

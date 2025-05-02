@@ -10,6 +10,8 @@ plugins {
     application
 }
 
+version = "v0.1.0"
+
 repositories {
     // Use Maven Central for resolving dependencies.
     mavenCentral()
@@ -40,4 +42,17 @@ application {
 tasks.named<Test>("test") {
     // Use JUnit Platform for unit tests.
     useJUnitPlatform()
+}
+
+tasks.named<Jar>("jar") {
+    // Compile the java to jar format
+    manifest {
+        attributes(
+            "Implementation-Title" to project.name,      // Use 'to' to create Pairs
+            "Implementation-Version" to project.version, // Use 'to'
+            "Main-Class" to "com.dsa.Main" 
+        )
+    }
+
+    archiveBaseName.set(project.name)
 }
