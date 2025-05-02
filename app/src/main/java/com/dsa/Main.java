@@ -1,26 +1,42 @@
 package com.dsa;
 
+import java.util.Scanner;
+
+import com.dsa.sorting.BubbleSort;
+
 class Main {
     public static void main(String[] args) {
-        DynamicArray dynamicArray = new DynamicArray(5);
-        dynamicArray.add("A");
-        dynamicArray.add("B");
-        dynamicArray.add("C");
-        dynamicArray.add("D");
-        dynamicArray.add("E");
-        dynamicArray.add("F");
-        // until here the dynamic array will adjust to have a capacity of 10
+        System.out.println("Data structures and algorithm course");
+        Main.userChoicesDisplay();
+        Scanner input = new Scanner(System.in);
+        String userResponse;
+        while (true) {
+            System.out.print("Enter your choice: ");
+            userResponse = input.nextLine();
+            if (userResponse.equals("quit")) {
+                break;
+            } else if (userResponse.equals("dynamic array")) {
+                DynamicArray.main();
+            } else if (userResponse.equals("hash")) {
+                Hash.main();
+            } else if (userResponse.equals("prime")) {
+                Prime.main();
+            } else if (userResponse.equals("bubble")) {
+                BubbleSort.main();
+            } else {
+                System.out.println("Incorrect input");
+                Main.userChoicesDisplay();
+            }
+        }
+        input.close();
+    }
 
-        dynamicArray.delete("A");
-        // dynamicArray.delete("B");
-        // dynamicArray.delete("C");
-        // dynamicArray.insert(0, "D");
-
-        System.out.println(dynamicArray.search("F"));
-
-        System.out.println(dynamicArray);
-        System.out.println("Empty: " + dynamicArray.isEmpty());
-        System.out.println("Size " + dynamicArray.size);
-        System.out.println("Capacity " + dynamicArray.capacity);
+    public static void userChoicesDisplay() {
+        System.out.println("\nChoose one of these option");
+        System.out.println("-- 'quit': quit the user prompt");
+        System.out.println("-- 'dynamic array': run the dynamic array main example");
+        System.out.println("-- 'hash': demonstrate how hash tables work");
+        System.out.println("-- 'prime': demonstrate calculating prime number");
+        System.out.println("-- 'bubble': demonstrate bubble sorting");
     }
 }
