@@ -3,6 +3,7 @@ package com.dsa;
 import java.util.Scanner;
 
 import com.dsa.sorting.BubbleSort;
+import com.dsa.sorting.InsertionSort;
 
 class Main {
     public static void main(String[] args) {
@@ -23,6 +24,8 @@ class Main {
                 Prime.main();
             } else if (userResponse.equals("bubble")) {
                 BubbleSort.main();
+            } else if (userResponse.equals("insertion sort")) {
+                InsertionSort.main();
             } else {
                 System.out.println("Incorrect input");
                 Main.userChoicesDisplay();
@@ -38,5 +41,6 @@ class Main {
         System.out.println("-- 'hash': demonstrate how hash tables work");
         System.out.println("-- 'prime': demonstrate calculating prime number");
         System.out.println("-- 'bubble': demonstrate bubble sorting");
+        System.out.println("-- 'insertion sort': demonstrate insertion sorting algorithm");
     }
 }
